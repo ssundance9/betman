@@ -101,11 +101,11 @@ public class MainController {
             if (StringUtils.equals(home, "기아")) {
                 home = "KIA";
             }
-            home = URLEncoder.encode(home, "UTF-8");
+            //home = URLEncoder.encode(home, "UTF-8");
             String homeStarter = game.getHomeStarter();
             
             CloseableHttpClient httpClient = HttpClients.createDefault();
-            String url = "http://www.statiz.co.kr/stat.php?mid=stat&re=1&ys=2020&ye=2020&se=0&te=" + home + "&tm=&ty=0&qu=auto&po=0&as=&ae=&hi=&un=&pl=&da=15&o1=ERAP&o2=OutCount&de=1&lr=0&tr=&cv=&ml=1&sn=30&pa=0&cn=&si=999&si_it=&si_wd=&si_tm=&si_ha=1&si_te=&si_st=&si_as=271&si_or=&si_ty=&si_pl=&si_in=&si_on=&si_um=&si_oc=&si_bs=&si_sc=&si_cnt=&si_aft=&si_li=";
+            String url = "http://www.statiz.co.kr/stat.php?mid=stat&re=1&ys=2020&ye=2020&se=0&te=" + URLEncoder.encode(home, "UTF-8") + "&tm=&ty=0&qu=auto&po=0&as=&ae=&hi=&un=&pl=&da=15&o1=ERAP&o2=OutCount&de=1&lr=0&tr=&cv=&ml=1&sn=30&pa=0&cn=&si=999&si_it=&si_wd=&si_tm=&si_ha=1&si_te=&si_st=&si_as=271&si_or=&si_ty=&si_pl=&si_in=&si_on=&si_um=&si_oc=&si_bs=&si_sc=&si_cnt=&si_aft=&si_li=";
             HttpGet httpGet = new HttpGet(url);
             httpGet.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
             //httpGet.addHeader("Cookie", "JSESSIONID=6646FA65DE5DEB830F24AFF037B709B1.was01_01");
