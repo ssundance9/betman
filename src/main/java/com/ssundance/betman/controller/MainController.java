@@ -116,7 +116,7 @@ public class MainController {
             String body = EntityUtils.toString(response.getEntity());
             Document doc = Jsoup.parse(body);
             
-            //System.out.println(body);
+            System.out.println(body);
 
             Elements list = doc.getElementsContainingOwnText(game.getHomeStarter());
             try {
