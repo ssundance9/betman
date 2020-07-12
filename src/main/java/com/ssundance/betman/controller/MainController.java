@@ -123,7 +123,11 @@ public class MainController {
             System.out.println("commit 07");
             System.out.println("commit 08");
             System.out.println("commit 09");
-
+            System.out.println("commit 10");
+            System.out.println("commit 11");
+            System.out.println("commit 12");
+            System.out.println("commit 13");
+            
             Elements list = doc.getElementsContainingOwnText(game.getHomeStarter());
             try {
                 if (list != null && list.size() > 0) {
