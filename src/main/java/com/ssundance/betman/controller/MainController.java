@@ -102,7 +102,7 @@ public class MainController {
                 home = "KIA";
             }
             //home = URLEncoder.encode(home, "UTF-8");
-            String homeStarter = game.getHomeStarter();
+            //String homeStarter = game.getHomeStarter();
             
             CloseableHttpClient httpClient = HttpClients.createDefault();
             String url = "http://www.statiz.co.kr/stat.php?mid=stat&re=1&ys=2020&ye=2020&se=0&te=" + URLEncoder.encode(home, "UTF-8") + "&tm=&ty=0&qu=auto&po=0&as=&ae=&hi=&un=&pl=&da=15&o1=ERAP&o2=OutCount&de=1&lr=0&tr=&cv=&ml=1&sn=30&pa=0&cn=&si=999&si_it=&si_wd=&si_tm=&si_ha=1&si_te=&si_st=&si_as=271&si_or=&si_ty=&si_pl=&si_in=&si_on=&si_um=&si_oc=&si_bs=&si_sc=&si_cnt=&si_aft=&si_li=";
@@ -118,7 +118,7 @@ public class MainController {
             
             //System.out.println(body);
 
-            Elements list = doc.getElementsContainingOwnText(homeStarter);
+            Elements list = doc.getElementsContainingOwnText(game.getHomeStarter());
             try {
                 if (list != null && list.size() > 0) {
                     Element e = list.get(0);
