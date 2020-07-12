@@ -117,6 +117,7 @@ public class MainController {
             Document doc = Jsoup.parse(body);
             
             System.out.println(body);
+            System.out.println("commit 04");
 
             Elements list = doc.getElementsContainingOwnText(game.getHomeStarter());
             try {
