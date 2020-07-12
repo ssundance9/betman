@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <div>
+        <span th:text="${'from : ' + fromStr}"></span><br>
+        <span th:text="${'to : ' + toStr}"></span>
+    </div>
+    
+    <br/>
+    
+    <div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>팀</th>
+                    <th>R27</th>
+                    <th>ERA</th>
+                    <th>SERA</th>
+                    <th>RERA</th>
+                </tr>
+            </thead>
+            <tbody th:each="game : ${gameList}">
+                <tr>
+                    <td>
+                        [[${game.home}]]([[${game.homeStarter}]])
+                    </td>
+                    <td>
+                        [[${game.homeStat.r27}]]
+                    </td>
+                    <td>
+                        [[${game.homeStat.homeEra}]]
+                    </td>
+                    <td>
+                        [[${game.homeStat.homeStarterEra}]]
+                    </td>
+                    <td>
+                        [[${game.homeStat.homeReliefEra}]]
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        [[${game.away}]]([[${game.awayStarter}]])
+                    </td>
+                    <td>
+                        [[${game.awayStat.r27}]]
+                    </td>
+                    <td>
+                        [[${game.awayStat.awayEra}]]
+                    </td>
+                    <td>
+                        [[${game.awayStat.awayStarterEra}]]
+                    </td>
+                    <td>
+                        [[${game.awayStat.awayReliefEra}]]
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+    </div>
+
+</body>
+</html>
