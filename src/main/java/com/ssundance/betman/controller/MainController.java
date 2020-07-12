@@ -120,7 +120,14 @@ public class MainController {
             System.out.println("commit 04");
             System.out.println("commit 05");
             System.out.println("commit 06");
-
+            System.out.println("commit 07");
+            System.out.println("commit 08");
+            System.out.println("commit 09");
+            System.out.println("commit 10");
+            System.out.println("commit 11");
+            System.out.println("commit 12");
+            System.out.println("commit 13");
+            
             Elements list = doc.getElementsContainingOwnText(game.getHomeStarter());
             try {
                 if (list != null && list.size() > 0) {
